@@ -4,12 +4,12 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import {GuestList} from './state/GuestList.tsx';
 import {UserSearch} from './state/UserSearch.tsx';
+import EventComponent from './events/EventComponent.tsx';
 
 const App = ()=>{
     return (
         <div>
-            <GuestList/>
-            <UserSearch/>
+            <EventComponent/>
         </div>
     )
 };
