@@ -1,15 +1,18 @@
-import { error } from "console";
-
 interface RepositoriesState{
     loading:boolean;
     error:string|null;
     data:string[];
 }
 
-const reducer = (state:RepositoriesState,action:any)=>{
+interface Action{
+    type:string;
+    payload?:any;
+}
+
+const reducer = (state:RepositoriesState,action:Action):RepositoriesState=>{
     switch(action.type){
         case 'search_repositories':
-        return {loading:true,error:null,datas:[]}
+        return {loading:true,error:null,data:[]}
         case 'search_repositories_success':
         return{ loading:false,error:null,data:action.payload}
         case 'search_repositories_error':
