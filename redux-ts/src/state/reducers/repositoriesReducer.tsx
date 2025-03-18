@@ -1,33 +1,12 @@
+import {ActionType} from '../action-types';
+import {Action} from '../action';
+
 interface RepositoriesState{
     loading:boolean;
     error:string|null;
     data:string[];
 }
 
-interface  SearchRepositoriesAction{
-    type:'search_repositories'
-}
-
-interface  SearchRepositoriesSuccessAction{
-    type:'search_repositories_success',
-    payload:string[]
-}
-
-interface SearchRepositoriesErrorAction{
-    type: 'search_repositories_error',
-    payload:string
-}
-
-type Action  = 
-    | SearchRepositoriesAction 
-    | SearchRepositoriesSuccessAction
-    | SearchRepositoriesErrorAction 
-
-enum ActionType{
-    SEARCH_REPOSITORIES = 'search_repositories',
-    SEARCH_REPOSITORIES_SUCCESS='search_repositories_success',
-    SEARCH_REPOSITORIES_ERROR  = 'search_repositories_error'
-}
 
 ActionType.SEARCH_REPOSITORIES
 ActionType.SEARCH_REPOSITORIES_SUCCESS
