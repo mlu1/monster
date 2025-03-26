@@ -33,7 +33,7 @@ class UserSearch extends Component<UserSearchProps>{
             <h1>Search User</h1>
             <input value = {this.state.name} 
             onChange={e=>this.setState(name:e.target.value)}/>
-            <button onClick={onClick}>Find User</button>
+            <button onClick={this.onClick}>Find User</button>
             <div>
                 {this.state.user && this.state.user.name}
                 {user && user.age}

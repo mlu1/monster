@@ -9,7 +9,7 @@ import EventComponent from './events/EventComponent.tsx';
 const App = ()=>{
     return (
         <div>
-            <EventComponent/>
+            <UserSearch/>
         </div>
     )
 };
